@@ -1,0 +1,14 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+    <h2>Delete Confirm</h2>
+    <a href="">yes</a>
+    <h3>{{ task_obj.name }}</h3>
+    <p>id: {{ task_obj.pk }}</p>
+    <p>is_finished: {{ task_obj.finished }}</p>
+    <p>
+        <a href="{% url 'todo:edit' task_obj.pk %}">edit</a>
+        <a href="#">Delete</a>
+    </p>
+
+{% endblock %}

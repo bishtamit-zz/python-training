@@ -1,0 +1,18 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+    <h2>Task Detail</h2>
+    <h3>{{ task_obj.name }}
+        <span style="font-size: .8em; color: rgba(0, 0, 0, 0.5)">
+            Assigned to: {{ task_obj.get_assigned_to_display }}
+        </span>
+    </h3>
+    <p>id: {{ task_obj.pk }}</p>
+    <p>is_finished: {{ task_obj.finished }}</p>
+    <p>description: {{ task_obj.description }}</p>
+    <p>
+        <a class='button orange' href="{% url 'todo:edit' task_obj.pk %}">edit</a>
+        <a class='button red' href="{% url 'todo:delete' task_obj.pk %}">Delete</a>
+    </p>
+
+{% endblock %}

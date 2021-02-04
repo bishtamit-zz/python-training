@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .button {
+            border-radius: 40px;
+            padding: 5px 10px;
+            margin: 5px;
+        {#border: 1px solid black;#} text-decoration: none;
+        }
+
+        .green {
+            background: forestgreen;
+            color: white;
+        }
+
+        .blue {
+            background: dodgerblue;
+            color: white;
+        }
+
+        .orange {
+            background: darkorange;
+            color: black;
+        }
+
+        .red {
+            background: red;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <nav>
+        <ul>
+            <li><a class="button blue" href="{% url 'index' %}">Home</a></li>
+            <li><a class="button blue" href="{% url 'todo:index' %}">Tasks</a></li>
+            <li><a class="button green" href="{% url 'todo:add' %}">Add new</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>About us </h2>
+    <p>Lorrem ipsum Lorrem ipsum Lorrem ipsum Lorrem ipsum Lorrem ipsum Lorrem ipsum </p>
+
+    <h3>Subscribe to newsletter</h3>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Subscribe</button>
+    </form>
+
+    {% if final_message %}
+        <p>{{ final_message }}</p>
+    {% endif %}
+
+{% endblock %}
