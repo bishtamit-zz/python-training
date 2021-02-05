@@ -18,4 +18,4 @@ class Task(models.Model):
     modified_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.name
+        return f"{self.name} -- {self.get_assigned_to_display()}"

@@ -9,7 +9,7 @@
     </h3>
     <p>id: {{ task_obj.pk }}</p>
     <p>is_finished: {{ task_obj.finished }}</p>
-    <p>description: {{ task_obj.description }}</p>
+        <p>description: {{ task_obj.description }}</p>
     <p>
         <a class='button orange' href="{% url 'todo:edit' task_obj.pk %}">edit</a>
         <a class='button red' href="{% url 'todo:delete' task_obj.pk %}">Delete</a>

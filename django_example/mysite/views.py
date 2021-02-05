@@ -16,6 +16,6 @@ def about(request):
             email = form.cleaned_data.get('email')
             contact = form.cleaned_data.get('contact')
             final_message = f'Thanks for subscribing. you will get weekly update on {email}/{contact}'
-            form = AboutForm()
+            # form = AboutForm()
 
     return render(request, 'about.html', {'form': form, 'final_message': final_message})
